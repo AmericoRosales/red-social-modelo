@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Red Social</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="{% url 'index' %}">Red Social</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'posts' %}">Publicaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <h1>Perfil de Juan Pérez</h1>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Información del Usuario</h5>
+                <dl class="row">
+                    <dt class="col-sm-3">Nombre:</dt>
+                    <dd class="col-sm-9">Juan Pérez</dd>
+                    <dt class="col-sm-3">Correo electrónico:</dt>
+                    <dd class="col-sm-9">juan@example.com</dd>
+                    <dt class="col-sm-3">Bio:</dt>
+                    <dd class="col-sm-9">Amante de la tecnología y los videojuegos.</dd>
+                </dl>
+            </div>
+        </div>
+        <h2>Publicaciones Recientes</h2>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">¡Estoy aprendiendo Django!</h5>
+                <p class="card-text">Hoy comencé a aprender Django y estoy muy emocionado con las posibilidades.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Evento de Tecnología</h5>
+                <p class="card-text">Participé en un evento de tecnología y aprendí sobre las últimas tendencias.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2024 Red Social. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
